@@ -88,3 +88,21 @@ cacheSolve <- function(x, ...) {
         inverse
 
 }
+#
+# Below is the results of code run and check taht it works
+#
+#> source("cachematrix.R")
+#> a <- matrix(c(1,0,5,2,1,6,3,4,0), nrow=3, ncol=3)
+#> anotherMatrix <- makeCacheMatrix(a)
+#> invMatrix <- cacheSolve(anotherMatrix)
+#> cacheSolve(anotherMatrix)
+#getting cached data
+#     [,1] [,2] [,3]
+#[1,]  -24   18    5
+#[2,]   20  -15   -4
+#[3,]   -5    4    1
+#> round(a %*% invMatrix,1)
+#     [,1] [,2] [,3]
+#[1,]    1    0    0
+#[2,]    0    1    0
+#[3,]    0    0    1
